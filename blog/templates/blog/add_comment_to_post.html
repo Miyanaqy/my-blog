@@ -1,7 +1,9 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-	<h1>New comment</h1>
+	<h1>{{ post.title }}</h1>
+	<p>{{ post.text }}</p>
+	<hr class="hr1">
 	<form method="POST" class="post-form">{% csrf_token %}
 		<div>{{ form.as_p }}</div>
 		<button type="submit" class="save btn btn-default">Send</button>
